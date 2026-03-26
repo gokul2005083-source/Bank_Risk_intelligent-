@@ -1,0 +1,305 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300">
+  <defs>
+    <!-- Deep navy-gold background -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#04080f"/>
+      <stop offset="50%"  stop-color="#060d1a"/>
+      <stop offset="100%" stop-color="#04100c"/>
+    </linearGradient>
+
+    <!-- Gold shimmer -->
+    <linearGradient id="goldShim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#7a5c00"/>
+      <stop offset="40%"  stop-color="#f0c040"/>
+      <stop offset="60%"  stop-color="#fde87a"/>
+      <stop offset="100%" stop-color="#7a5c00"/>
+    </linearGradient>
+
+    <!-- Scan line gradient -->
+    <linearGradient id="scanG" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#f0c040" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#f0c040" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#f0c040" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Green accent (safe/approved) -->
+    <linearGradient id="greenG" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#00c97a" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#00c97a" stop-opacity="0.3"/>
+    </linearGradient>
+
+    <!-- Red accent (risk) -->
+    <linearGradient id="redG" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#e04040" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#e04040" stop-opacity="0.3"/>
+    </linearGradient>
+
+    <!-- Amber accent (caution) -->
+    <linearGradient id="ambG" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#f0a020" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#f0a020" stop-opacity="0.3"/>
+    </linearGradient>
+
+    <clipPath id="clip">
+      <rect width="900" height="300" rx="14"/>
+    </clipPath>
+    <clipPath id="chartClip">
+      <rect x="174" y="155" width="360" height="90"/>
+    </clipPath>
+  </defs>
+
+  <!-- BG -->
+  <rect width="900" height="300" rx="14" fill="url(#bg)"/>
+
+  <!-- Subtle diagonal stripes texture -->
+  <g clip-path="url(#clip)" opacity="0.025">
+    <line x1="-300" y1="0"   x2="300"  y2="600" stroke="#f0c040" stroke-width="40"/>
+    <line x1="-100" y1="0"   x2="500"  y2="600" stroke="#f0c040" stroke-width="40"/>
+    <line x1="100"  y1="0"   x2="700"  y2="600" stroke="#f0c040" stroke-width="40"/>
+    <line x1="300"  y1="0"   x2="900"  y2="600" stroke="#f0c040" stroke-width="40"/>
+    <line x1="500"  y1="0"   x2="1100" y2="600" stroke="#f0c040" stroke-width="40"/>
+    <line x1="700"  y1="0"   x2="1300" y2="600" stroke="#f0c040" stroke-width="40"/>
+  </g>
+
+  <!-- Grid dots -->
+  <g clip-path="url(#clip)" opacity="0.06">
+    <rect x="0" y="0" width="900" height="300"
+      fill="none"
+      style="background: radial-gradient(circle, #f0c040 1px, transparent 1px)"/>
+  </g>
+
+  <!-- Outer border gold -->
+  <rect x="0.5" y="0.5" width="899" height="299" rx="14" fill="none" stroke="url(#goldShim)" stroke-width="1.2"/>
+
+  <!-- Inner subtle border -->
+  <rect x="6" y="6" width="888" height="288" rx="10" fill="none" stroke="#f0c040" stroke-width="0.4" stroke-opacity="0.15"/>
+
+  <!-- Scanline sweep -->
+  <rect x="0" y="0" width="900" height="2" fill="url(#scanG)" clip-path="url(#clip)">
+    <animate attributeName="y" from="-2" to="302" dur="4s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Corner HUD brackets -->
+  <polyline points="14,34 14,14 34,14"    fill="none" stroke="#f0c040" stroke-width="1.5" opacity="0.6"/>
+  <polyline points="866,14 886,14 886,34" fill="none" stroke="#f0c040" stroke-width="1.5" opacity="0.6"/>
+  <polyline points="14,266 14,286 34,286" fill="none" stroke="#f0c040" stroke-width="1.5" opacity="0.6"/>
+  <polyline points="866,286 886,286 886,266" fill="none" stroke="#f0c040" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Top center label -->
+  <text x="450" y="20" text-anchor="middle" font-family="'Courier New', monospace" font-size="8.5" fill="#f0c040" opacity="0.4" letter-spacing="3">FINANCIAL INTELLIGENCE SYSTEM v2.4</text>
+
+  <!-- ================================ -->
+  <!-- LEFT: BANK ICON + TITLE SECTION  -->
+  <!-- ================================ -->
+
+  <!-- Bank pillar icon -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.8s" fill="freeze"/>
+    <!-- Roof triangle -->
+    <polygon points="88,62 130,90 46,90" fill="none" stroke="#f0c040" stroke-width="1.5" stroke-opacity="0.9"/>
+    <!-- Pillars -->
+    <rect x="52"  y="90" width="8" height="44" rx="1" fill="#f0c040" fill-opacity="0.7"/>
+    <rect x="66"  y="90" width="8" height="44" rx="1" fill="#f0c040" fill-opacity="0.7"/>
+    <rect x="80"  y="90" width="8" height="44" rx="1" fill="#f0c040" fill-opacity="0.7"/>
+    <rect x="94"  y="90" width="8" height="44" rx="1" fill="#f0c040" fill-opacity="0.7"/>
+    <rect x="108" y="90" width="8" height="44" rx="1" fill="#f0c040" fill-opacity="0.7"/>
+    <rect x="122" y="90" width="8" height="44" rx="1" fill="#f0c040" fill-opacity="0.7"/>
+    <!-- Base -->
+    <rect x="44" y="134" width="88" height="6" rx="1" fill="#f0c040" fill-opacity="0.9"/>
+    <rect x="40" y="140" width="96" height="4" rx="1" fill="#f0c040" fill-opacity="0.5"/>
+    <!-- Star/glow on top -->
+    <circle cx="88" cy="62" r="4" fill="#f0c040" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0.4;0.9" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Pulse rings around bank icon -->
+  <circle cx="88" cy="105" r="55" fill="none" stroke="#f0c040" stroke-width="1">
+    <animate attributeName="r"       values="55;75;55" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0;0.4" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="88" cy="105" r="55" fill="none" stroke="#f0c040" stroke-width="0.8">
+    <animate attributeName="r"       values="55;85;55" dur="3s" begin="0.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.25;0;0.25" dur="3s" begin="0.8s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Title block -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.7s" begin="0.3s" fill="freeze"/>
+    <!-- Eyebrow -->
+    <rect x="174" y="40" width="4" height="20" rx="1" fill="#f0c040"/>
+    <text x="184" y="54" font-family="'Courier New', monospace" font-size="9" fill="#f0c040" letter-spacing="3" opacity="0.7">RISK INTELLIGENCE PLATFORM</text>
+  </g>
+
+  <!-- Main title line 1 -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.6s" begin="0.5s" fill="freeze"/>
+    <text x="174" y="95" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="bold" fill="#ffffff" letter-spacing="-0.5">Bank Risk</text>
+  </g>
+
+  <!-- Main title line 2 gold -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.6s" begin="0.7s" fill="freeze"/>
+    <text x="174" y="138" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="bold" fill="url(#goldShim)" letter-spacing="-0.5">&amp; Loan Intelligence</text>
+  </g>
+
+  <!-- Subtitle -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0.65" dur="0.6s" begin="1s" fill="freeze"/>
+    <text x="174" y="158" font-family="'Courier New', monospace" font-size="11" fill="#c8b880" letter-spacing="0.3">AI-powered credit scoring · loan decisioning · portfolio risk analytics</text>
+  </g>
+
+  <!-- ================================ -->
+  <!-- MINI BAR CHART (decorative)      -->
+  <!-- ================================ -->
+  <g clip-path="url(#chartClip)" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.2s" fill="freeze"/>
+    <!-- Chart BG line -->
+    <line x1="174" y1="242" x2="534" y2="242" stroke="#f0c040" stroke-opacity="0.15" stroke-width="0.5"/>
+    <line x1="174" y1="220" x2="534" y2="220" stroke="#f0c040" stroke-opacity="0.08" stroke-width="0.5"/>
+    <line x1="174" y1="198" x2="534" y2="198" stroke="#f0c040" stroke-opacity="0.08" stroke-width="0.5"/>
+    <line x1="174" y1="176" x2="534" y2="176" stroke="#f0c040" stroke-opacity="0.08" stroke-width="0.5"/>
+
+    <!-- Bars: loan risk distribution -->
+    <rect x="182" y="212" width="22" height="30" rx="2" fill="url(#greenG)">
+      <animate attributeName="height" values="0;30" dur="0.6s" begin="1.3s" fill="freeze"/>
+      <animate attributeName="y"      values="242;212" dur="0.6s" begin="1.3s" fill="freeze"/>
+    </rect>
+    <rect x="214" y="195" width="22" height="47" rx="2" fill="url(#greenG)">
+      <animate attributeName="height" values="0;47" dur="0.6s" begin="1.4s" fill="freeze"/>
+      <animate attributeName="y"      values="242;195" dur="0.6s" begin="1.4s" fill="freeze"/>
+    </rect>
+    <rect x="246" y="175" width="22" height="67" rx="2" fill="url(#ambG)">
+      <animate attributeName="height" values="0;67" dur="0.6s" begin="1.5s" fill="freeze"/>
+      <animate attributeName="y"      values="242;175" dur="0.6s" begin="1.5s" fill="freeze"/>
+    </rect>
+    <rect x="278" y="182" width="22" height="60" rx="2" fill="url(#ambG)">
+      <animate attributeName="height" values="0;60" dur="0.6s" begin="1.6s" fill="freeze"/>
+      <animate attributeName="y"      values="242;182" dur="0.6s" begin="1.6s" fill="freeze"/>
+    </rect>
+    <rect x="310" y="205" width="22" height="37" rx="2" fill="url(#redG)">
+      <animate attributeName="height" values="0;37" dur="0.6s" begin="1.7s" fill="freeze"/>
+      <animate attributeName="y"      values="242;205" dur="0.6s" begin="1.7s" fill="freeze"/>
+    </rect>
+    <rect x="342" y="220" width="22" height="22" rx="2" fill="url(#redG)">
+      <animate attributeName="height" values="0;22" dur="0.6s" begin="1.8s" fill="freeze"/>
+      <animate attributeName="y"      values="242;220" dur="0.6s" begin="1.8s" fill="freeze"/>
+    </rect>
+    <rect x="374" y="210" width="22" height="32" rx="2" fill="url(#greenG)">
+      <animate attributeName="height" values="0;32" dur="0.6s" begin="1.9s" fill="freeze"/>
+      <animate attributeName="y"      values="242;210" dur="0.6s" begin="1.9s" fill="freeze"/>
+    </rect>
+    <rect x="406" y="188" width="22" height="54" rx="2" fill="url(#greenG)">
+      <animate attributeName="height" values="0;54" dur="0.6s" begin="2.0s" fill="freeze"/>
+      <animate attributeName="y"      values="242;188" dur="0.6s" begin="2.0s" fill="freeze"/>
+    </rect>
+    <rect x="438" y="197" width="22" height="45" rx="2" fill="url(#ambG)">
+      <animate attributeName="height" values="0;45" dur="0.6s" begin="2.1s" fill="freeze"/>
+      <animate attributeName="y"      values="242;197" dur="0.6s" begin="2.1s" fill="freeze"/>
+    </rect>
+    <rect x="470" y="215" width="22" height="27" rx="2" fill="url(#greenG)">
+      <animate attributeName="height" values="0;27" dur="0.6s" begin="2.2s" fill="freeze"/>
+      <animate attributeName="y"      values="242;215" dur="0.6s" begin="2.2s" fill="freeze"/>
+    </rect>
+    <rect x="502" y="200" width="22" height="42" rx="2" fill="url(#greenG)">
+      <animate attributeName="height" values="0;42" dur="0.6s" begin="2.3s" fill="freeze"/>
+      <animate attributeName="y"      values="242;200" dur="0.6s" begin="2.3s" fill="freeze"/>
+    </rect>
+
+    <!-- Chart label -->
+    <text x="174" y="256" font-family="'Courier New', monospace" font-size="8" fill="#c8b880" fill-opacity="0.5" letter-spacing="1">LOAN RISK DISTRIBUTION — PORTFOLIO VIEW</text>
+  </g>
+
+  <!-- ================================ -->
+  <!-- RIGHT: KPI STAT CARDS            -->
+  <!-- ================================ -->
+
+  <!-- Divider line -->
+  <line x1="578" y1="30" x2="578" y2="270" stroke="#f0c040" stroke-opacity="0.12" stroke-width="0.8"/>
+
+  <!-- Card 1: Credit Score -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.5s" fill="freeze"/>
+    <rect x="592" y="28" width="278" height="62" rx="7" fill="#f0c040" fill-opacity="0.03" stroke="#f0c040" stroke-opacity="0.18" stroke-width="0.8"/>
+    <!-- left accent bar -->
+    <rect x="592" y="28" width="3" height="62" rx="2" fill="#f0c040" fill-opacity="0.6"/>
+    <text x="605" y="47" font-family="'Courier New', monospace" font-size="8.5" fill="#c8b880" fill-opacity="0.55" letter-spacing="2">CREDIT SCORE INDEX</text>
+    <text x="605" y="73" font-family="Georgia, serif" font-size="26" font-weight="bold" fill="#f0c040">742</text>
+    <text x="648" y="73" font-family="'Courier New', monospace" font-size="9" fill="#00c97a"> / 850</text>
+    <!-- mini sparkline -->
+    <polyline points="720,72 730,65 742,68 754,58 766,62 778,55 790,50 802,54 814,48 826,52 838,45 850,42 862,40"
+      fill="none" stroke="#f0c040" stroke-width="1.2" stroke-opacity="0.5"/>
+    <circle cx="862" cy="40" r="2.5" fill="#f0c040" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Card 2: Approval Rate -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.75s" fill="freeze"/>
+    <rect x="592" y="100" width="278" height="62" rx="7" fill="#00c97a" fill-opacity="0.03" stroke="#00c97a" stroke-opacity="0.2" stroke-width="0.8"/>
+    <rect x="592" y="100" width="3" height="62" rx="2" fill="#00c97a" fill-opacity="0.7"/>
+    <text x="605" y="119" font-family="'Courier New', monospace" font-size="8.5" fill="#80e0b0" fill-opacity="0.55" letter-spacing="2">LOAN APPROVAL RATE</text>
+    <text x="605" y="145" font-family="Georgia, serif" font-size="26" font-weight="bold" fill="#00c97a">84.3%</text>
+    <text x="680" y="145" font-family="'Courier New', monospace" font-size="9" fill="#80e0b0" fill-opacity="0.6"> this quarter</text>
+    <!-- Progress bar bg -->
+    <rect x="605" y="151" width="255" height="4" rx="2" fill="#00c97a" fill-opacity="0.1"/>
+    <!-- Progress bar fill -->
+    <rect x="605" y="151" width="0" height="4" rx="2" fill="#00c97a" fill-opacity="0.6">
+      <animate attributeName="width" values="0;215" dur="1.2s" begin="1s" fill="freeze"/>
+    </rect>
+  </g>
+
+  <!-- Card 3: Risk Score -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.0s" fill="freeze"/>
+    <rect x="592" y="172" width="278" height="62" rx="7" fill="#e04040" fill-opacity="0.03" stroke="#e04040" stroke-opacity="0.2" stroke-width="0.8"/>
+    <rect x="592" y="172" width="3" height="62" rx="2" fill="#e04040" fill-opacity="0.7"/>
+    <text x="605" y="191" font-family="'Courier New', monospace" font-size="8.5" fill="#e08080" fill-opacity="0.55" letter-spacing="2">PORTFOLIO RISK SCORE</text>
+    <text x="605" y="217" font-family="Georgia, serif" font-size="26" font-weight="bold" fill="#e05050">LOW</text>
+    <text x="652" y="217" font-family="'Courier New', monospace" font-size="9" fill="#e08080" fill-opacity="0.6"> risk exposure</text>
+    <!-- Risk indicator dots -->
+    <circle cx="605" cy="228" r="4" fill="#00c97a" opacity="0.9"/>
+    <circle cx="618" cy="228" r="4" fill="#00c97a" opacity="0.9"/>
+    <circle cx="631" cy="228" r="4" fill="#f0a020" opacity="0.9"/>
+    <circle cx="644" cy="228" r="4" fill="#e04040" opacity="0.25"/>
+    <circle cx="657" cy="228" r="4" fill="#e04040" opacity="0.15"/>
+  </g>
+
+  <!-- Card 4: Active Loans -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.25s" fill="freeze"/>
+    <rect x="592" y="244" width="278" height="46" rx="7" fill="#f0c040" fill-opacity="0.03" stroke="#f0c040" stroke-opacity="0.13" stroke-width="0.8"/>
+    <rect x="592" y="244" width="3" height="46" rx="2" fill="#f0c040" fill-opacity="0.4"/>
+    <text x="605" y="260" font-family="'Courier New', monospace" font-size="8.5" fill="#c8b880" fill-opacity="0.5" letter-spacing="2">ACTIVE LOAN ACCOUNTS</text>
+    <text x="605" y="281" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#f0c040">12,847</text>
+    <!-- blinking dot -->
+    <circle cx="700" cy="274" r="3.5" fill="#00c97a">
+      <animate attributeName="opacity" values="1;0.2;1" dur="1.2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="708" y="279" font-family="'Courier New', monospace" font-size="9" fill="#00c97a" fill-opacity="0.7">LIVE</text>
+    <text x="740" y="279" font-family="'Courier New', monospace" font-size="9" fill="#c8b880" fill-opacity="0.4">  +3.2% MoM</text>
+  </g>
+
+  <!-- Bottom status bar -->
+  <rect x="0" y="280" width="900" height="20" rx="0" fill="#f0c040" fill-opacity="0.03" clip-path="url(#clip)"/>
+  <line x1="0" y1="280" x2="900" y2="280" stroke="#f0c040" stroke-opacity="0.1" stroke-width="0.5"/>
+
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.5s" fill="freeze"/>
+    <circle cx="22" cy="290" r="3" fill="#00c97a">
+      <animate attributeName="opacity" values="1;0.2;1" dur="1.2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="30" y="294" font-family="'Courier New', monospace" font-size="8" fill="#c8b880" fill-opacity="0.45" letter-spacing="1">SYSTEM ONLINE</text>
+    <text x="200" y="294" font-family="'Courier New', monospace" font-size="8" fill="#c8b880" fill-opacity="0.3" letter-spacing="1">|  AI MODEL: RISK-GPT v4.1  |  LAST SYNC: REAL-TIME  |  REGULATORY: BASEL III COMPLIANT</text>
+    <!-- right side version -->
+    <text x="860" y="294" text-anchor="end" font-family="'Courier New', monospace" font-size="8" fill="#c8b880" fill-opacity="0.3" letter-spacing="1">v2.4.1</text>
+  </g>
+
+  <!-- Floating particles -->
+  <circle cx="160" cy="45"  r="1.2" fill="#f0c040" opacity="0.25"><animate attributeName="opacity" values="0.25;0.7;0.25" dur="3s"   begin="0s"   repeatCount="indefinite"/></circle>
+  <circle cx="540" cy="35"  r="1"   fill="#f0c040" opacity="0.2" ><animate attributeName="opacity" values="0.2;0.6;0.2"  dur="4.5s" begin="1s"   repeatCount="indefinite"/></circle>
+  <circle cx="155" cy="230" r="1.5" fill="#00c97a" opacity="0.2" ><animate attributeName="opacity" values="0.2;0.6;0.2"  dur="5s"   begin="2s"   repeatCount="indefinite"/></circle>
+  <circle cx="555" cy="250" r="1"   fill="#f0c040" opacity="0.2" ><animate attributeName="opacity" values="0.2;0.5;0.2"  dur="3.5s" begin="0.5s" repeatCount="indefinite"/></circle>
+  <circle cx="140" cy="150" r="1"   fill="#e04040" opacity="0.2" ><animate attributeName="opacity" values="0.2;0.5;0.2"  dur="6s"   begin="1.5s" repeatCount="indefinite"/></circle>
+</svg>
