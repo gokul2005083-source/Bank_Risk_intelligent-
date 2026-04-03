@@ -12,4 +12,4 @@
 </div>
 
 
-[![Bank Risk Banner](bank-risk-banner.svg)](https://bankloanandriskingermane.netlify.app/)
+[![Bank Risk Banner](bank-risk-banner.svg)](https://german-bank.netlify.app/)
